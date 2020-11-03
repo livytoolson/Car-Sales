@@ -6,7 +6,7 @@ export const AddedFeature = state => {
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
-      <button className="button" onClick={e => {state.removeFeature(state.feature)}}>
+      <button className="button" onClick={() => {state.removeFeature(state.feature)}}>
         X
       </button>
       {state.feature.name}
