@@ -19,12 +19,16 @@ export const carReducer = (state = initialState, action) => {
     switch(action.type) {
         case 'ADD_FEATURE': {
             return {
-
+                ...state,
+                features: [
+                    ...state.features,
+                    { feature: action.payload }
+                ]
             }
         }
         case 'REMOVE_ADDED_FEATURE': {
             return {
-
+                
             }
         }
         case 'ADD_TO_TOTAL': {
@@ -34,7 +38,7 @@ export const carReducer = (state = initialState, action) => {
         }
         case 'SUBTRACT_FROM_TOTAL': {
             return {
-                
+
             }
         }
         default:
