@@ -6,7 +6,9 @@ export const AddedFeature = state => {
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
-      <button className="button" onClick={e => {state.removeFeature(state.feature)}}>X</button>
+      <button className="button" onClick={e => {state.removeFeature(state.feature)}}>
+        X
+      </button>
       {state.feature.name}
     </li>
   );
@@ -14,7 +16,7 @@ export const AddedFeature = state => {
 
 const mapStateToProps = (state) => {
   return {
-    additionalFeatuers: state.additionalFeatuers
+    additionalFeatures: state.additionalFeatures
   };
 };
 

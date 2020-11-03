@@ -6,7 +6,9 @@ export const AdditionalFeature = state => {
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
-      <button className="button" onClick={e => {state.addPrice(state.feature)}}>Add</button>
+      <button className="button" onClick={e => {state.addPrice(state.feature)}}>
+        Add
+      </button>
       {state.feature.name} (+{state.feature.price})
     </li>
   );

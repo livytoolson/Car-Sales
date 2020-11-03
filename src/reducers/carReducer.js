@@ -37,10 +37,10 @@ export const carReducer = (state = initialState, action) => {
                 car: {
                     ...state.car,
                     price: state.car.price - action.payload.price,
-                    features: state.car.features.filter(( id ) => 
-                        ![ ...state.additionalFeatures.map(( id ) => id),
-                        action.payload.id].includes(id)
-                    )
+                    features: state.car.features.filter(item => {
+                        return item.id !== action.payload.id;
+                    }),
+                    additionalPrice: state.additionalPrice + action.payload.price
                 }
             };
         default:
